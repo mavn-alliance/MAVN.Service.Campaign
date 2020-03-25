@@ -1,0 +1,35 @@
+CampaignService:
+    Db:
+        LogsConnString:
+            settings-key: CampaignService-LogsConnString
+            types:
+              - AzureTableStorage
+        RulesImageConnString:
+            settings-key: CampaignService-RulesImageConnString
+            types:
+              - AzureTableStorage
+        MsSqlConnectionString:
+            settings-key: CampaignService-MsSqlConnectionString
+    RabbitMq:
+        PublishRabbitMqConnectionString:
+            settings-key: BonusManagementRabbitMQ
+            types:
+              - RabbitMq
+        SubscribeRabbitMqConnectionString:
+            settings-key: SchedulerRabbitMQ
+            types:
+              - RabbitMq
+    BaseCurrencyCode:
+        settings-key: Constant-BaseCurrencyCode
+SlackNotifications:
+    AzureQueue:
+        ConnectionString:
+            settings-key: SlackNotificationsConnString
+            types:
+                - AzureTableStorage
+        QueueName:
+            settings-key: SlackQueueName
+MonitoringServiceClient:
+    MonitoringServiceUrl:
+        settings-key: MonitoringServiceUrl
+

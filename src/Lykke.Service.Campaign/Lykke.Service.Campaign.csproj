@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Lykke.Sdk" Version="5.17.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\client\Lykke.Service.Campaign.Client\Lykke.Service.Campaign.Client.csproj" />
+    <ProjectReference Include="..\..\contract\Lykke.Service.Campaign.Contract\Lykke.Service.Campaign.Contract.csproj" />
+    <ProjectReference Include="..\Lykke.Service.Campaign.AzureRepositories\Lykke.Service.Campaign.AzureRepositories.csproj" />
+    <ProjectReference Include="..\Lykke.Service.Campaign.Domain\Lykke.Service.Campaign.Domain.csproj" />
+    <ProjectReference Include="..\Lykke.Service.Campaign.DomainServices\Lykke.Service.Campaign.DomainServices.csproj" />
+    <ProjectReference Include="..\Lykke.Service.Campaign.MsSqlRepositories\Lykke.Service.Campaign.MsSqlRepositories.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Strings\Phrases.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Phrases.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Strings\Phrases.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Phrases.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
