@@ -80,7 +80,7 @@ namespace Lykke.Service.Campaign.MsSqlRepositories.Repositories
             }
         }
 
-        public async Task<PaginatedBurnRuleList> GetPagedAsync(BurnRuleListRequestModel request)
+        public async Task<PaginatedBurnRuleList> GetPagedAsync(BurnRuleListRequestModel request, bool includeContents)
         {
             var predicate = PredicateBuilder.New<BurnRuleEntity>(c => !c.IsDeleted);
 
@@ -98,7 +98,13 @@ namespace Lykke.Service.Campaign.MsSqlRepositories.Repositories
 
             using (var context = _msSqlContextFactory.CreateDataContext())
             {
-                var results = await context.BurnRules.AsNoTracking()
+                var query = context.BurnRules.AsNoTracking();
+                if (includeContents)
+                    query = query
+                        .Include(e => e.BurnRuleContents)
+                        .Include(e => e.BurnRulePartners);
+
+                var results = await query
                     .Where(predicate)
                     .ToListAsync();
 

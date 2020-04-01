@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using Falcon.Numerics;
 using Lykke.Service.Campaign.Domain.Enums;
+using Lykke.Service.PartnerManagement.Client.Models;
 
 namespace Lykke.Service.Campaign.Domain.Models
 {
     public class ConditionLocalizedModel
     {
         public string Id { get; set; }
-        
+
         public string Type { get; set; }
+
+        public Vertical? Vertical { get; set; }
 
         public bool IsHidden { get; set; }
 
         public string DisplayName { get; set; }
-        
+
         public Money18 ImmediateReward { get; set; }
-        
+
         public int CompletionCount { get; set; }
-        
+
         public List<Guid> PartnerIds { get; set; }
 
         public bool HasStaking { get; set; }

@@ -15,7 +15,7 @@ namespace Lykke.Service.Campaign.Domain.Repositories
 
         Task<BurnRuleModel> GetAsync(Guid burnRuleId, bool includeDeleted = false);
 
-        Task<PaginatedBurnRuleList> GetPagedAsync(BurnRuleListRequestModel paginationModel);
+        Task<PaginatedBurnRuleList> GetPagedAsync(BurnRuleListRequestModel paginationModel, bool includeContents);
 
         Task<BurnRuleModel> GetByIdAsync(Guid burnRuleId);
 

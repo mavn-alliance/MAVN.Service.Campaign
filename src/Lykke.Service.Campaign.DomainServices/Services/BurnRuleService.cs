@@ -171,13 +171,14 @@ namespace Lykke.Service.Campaign.DomainServices.Services
 
         public async Task<PaginatedBurnRuleList> GetPagedAsync(BurnRuleListRequestModel paginationModel)
         {
-            return await _burnRuleRepository.GetPagedAsync(paginationModel);
+            return await _burnRuleRepository.GetPagedAsync(paginationModel, false);
         }
 
         public async Task<PaginatedBurnRuleListModel> GetLocalizedPagedAsync(Localization language, PaginationModel paginationModel)
         {
             var spendRulesPage = await _burnRuleRepository.GetPagedAsync(
-                new BurnRuleListRequestModel { CurrentPage = paginationModel.CurrentPage, PageSize = paginationModel.PageSize });
+                new BurnRuleListRequestModel { CurrentPage = paginationModel.CurrentPage, PageSize = paginationModel.PageSize },
+                true);
 
             return new PaginatedBurnRuleListModel
             {

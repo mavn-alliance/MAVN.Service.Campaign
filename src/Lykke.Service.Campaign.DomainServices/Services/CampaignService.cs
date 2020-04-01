@@ -334,7 +334,10 @@ namespace Lykke.Service.Campaign.DomainServices.Services
             }
         }
 
-        public async Task<PaginatedEarnRuleListModel> GetEarnRulesPagedAsync(Localization language, List<CampaignStatus> statuses, PaginationModel pagination)
+        public async Task<PaginatedEarnRuleListModel> GetEarnRulesPagedAsync(
+            Localization language,
+            List<CampaignStatus> statuses,
+            PaginationModel pagination)
         {
             var results = await _campaignRepository.GetEnabledCampaignsByStatusAsync(statuses, pagination);
 
@@ -357,8 +360,9 @@ namespace Lykke.Service.Campaign.DomainServices.Services
                     CreationDate = result.CreationDate,
                     CompletionCount = result.CompletionCount,
                     ApproximateAward = result.ApproximateAward,
-                    IsApproximate = result.RewardType == RewardType.Percentage || result.RewardType == RewardType.ConversionRate
-                                                                               || (result.Conditions.Any(cc => cc.RewardType == RewardType.Percentage || cc.RewardType == RewardType.ConversionRate)),
+                    IsApproximate = result.RewardType == RewardType.Percentage
+                        || result.RewardType == RewardType.ConversionRate
+                        || (result.Conditions.Any(cc => cc.RewardType == RewardType.Percentage || cc.RewardType == RewardType.ConversionRate)),
                     Title = result.GetContent(RuleContentType.Title, language)?.Value,
                     Status = result.CampaignStatus,
                     Description = result.GetContent(RuleContentType.Description, language)?.Value,
@@ -369,6 +373,7 @@ namespace Lykke.Service.Campaign.DomainServices.Services
                         {
                             Id = c.Id,
                             Type = c.BonusType.Type,
+                            Vertical = c.BonusType.Vertical,
                             IsHidden = c.BonusType.IsHidden,
                             DisplayName = c.BonusType.DisplayName,
                             ImmediateReward = c.ImmediateReward,
@@ -425,8 +430,9 @@ namespace Lykke.Service.Campaign.DomainServices.Services
                 ImageUrl = result.GetContent(RuleContentType.UrlForPicture, localization)?.Value,
                 ApproximateAward = result.ApproximateAward,
                 Order = result.Order,
-                IsApproximate = result.RewardType == RewardType.Percentage || result.RewardType == RewardType.ConversionRate
-                                                                                           || (result.Conditions.Any(cc => cc.RewardType == RewardType.Percentage || cc.RewardType == RewardType.ConversionRate)),
+                IsApproximate = result.RewardType == RewardType.Percentage
+                    || result.RewardType == RewardType.ConversionRate
+                    || (result.Conditions.Any(cc => cc.RewardType == RewardType.Percentage || cc.RewardType == RewardType.ConversionRate)),
 
                 Conditions = result.Conditions
                     .Select(c => new ConditionLocalizedModel

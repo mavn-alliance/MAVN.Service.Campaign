@@ -29,7 +29,10 @@ namespace Lykke.Service.Campaign.Domain.Services
 
         Task SaveCampaignContentImage(FileModel file);
 
-        Task<PaginatedEarnRuleListModel> GetEarnRulesPagedAsync(Localization language, List<CampaignStatus> statuses, PaginationModel pagination);
+        Task<PaginatedEarnRuleListModel> GetEarnRulesPagedAsync(
+            Localization language,
+            List<CampaignStatus> statuses,
+            PaginationModel pagination);
 
         Task<EarnRuleLocalizedModel> GetAsync(Guid earnRuleId, Localization language);
 

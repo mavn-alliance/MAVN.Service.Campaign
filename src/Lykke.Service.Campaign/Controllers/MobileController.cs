@@ -40,7 +40,9 @@ namespace Lykke.Service.Campaign.Controllers
         /// <returns code="200">A collection of spend rules.</returns>
         [HttpGet("burn-rules")]
         [ProducesResponseType(typeof(BurnRulePaginatedResponseModel), (int) HttpStatusCode.OK)]
-        public async Task<BurnRulePaginatedResponseModel> GetSpendRulesAsync(Localization language, BasePaginationRequestModel pagination)
+        public async Task<BurnRulePaginatedResponseModel> GetSpendRulesAsync(
+            Localization language,
+            [FromQuery] BasePaginationRequestModel pagination)
         {
             var spendRules = await _burnRuleService.GetLocalizedPagedAsync(
                 Enum.Parse<Domain.Enums.Localization>(language.ToString(), true),
