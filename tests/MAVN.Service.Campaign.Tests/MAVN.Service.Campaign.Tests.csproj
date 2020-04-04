@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>1.0.0</Version>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoFixture" Version="4.11.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\client\MAVN.Service.Campaign.Client\MAVN.Service.Campaign.Client.csproj" />
+    <ProjectReference Include="..\..\src\MAVN.Service.Campaign.MsSqlRepositories\MAVN.Service.Campaign.MsSqlRepositories.csproj" />
+    <ProjectReference Include="..\..\src\MAVN.Service.Campaign\MAVN.Service.Campaign.csproj" />
+    <ProjectReference Include="..\..\src\MAVN.Service.Campaign.DomainServices\MAVN.Service.Campaign.DomainServices.csproj" />
+  </ItemGroup>
+</Project>
