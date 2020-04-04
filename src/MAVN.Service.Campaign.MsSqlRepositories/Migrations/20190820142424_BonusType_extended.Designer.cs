@@ -22,7 +22,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.BonusTypeEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.BonusTypeEntity", b =>
                 {
                     b.Property<string>("Type")
                         .ValueGeneratedOnAdd()
@@ -52,7 +52,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Migrations
                     b.ToTable("bonus_type");
                 });
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.BurnRuleContentEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.BurnRuleContentEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -77,7 +77,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Migrations
                     b.ToTable("burn_rule_contents");
                 });
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.BurnRuleEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.BurnRuleEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -109,7 +109,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Migrations
                     b.ToTable("burn_rules");
                 });
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.CampaignEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.CampaignEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -153,7 +153,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Migrations
                     b.ToTable("campaign");
                 });
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.ConditionEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.ConditionEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -180,7 +180,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Migrations
                     b.ToTable("condition");
                 });
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.Configuration", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.Configuration", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -193,7 +193,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Migrations
                     b.ToTable("configuration");
                 });
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.EarnRuleContentEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.EarnRuleContentEntity", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -218,29 +218,29 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Migrations
                     b.ToTable("earn_rule_contents");
                 });
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.BurnRuleContentEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.BurnRuleContentEntity", b =>
                 {
-                    b.HasOne("Lykke.Service.Campaign.MsSqlRepositories.Entities.BurnRuleEntity", "BurnRule")
+                    b.HasOne("MAVN.Service.Campaign.MsSqlRepositories.Entities.BurnRuleEntity", "BurnRule")
                         .WithMany("BurnRuleContents")
                         .HasForeignKey("BurnRuleId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.ConditionEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.ConditionEntity", b =>
                 {
-                    b.HasOne("Lykke.Service.Campaign.MsSqlRepositories.Entities.BonusTypeEntity", "BonusTypeEntity")
+                    b.HasOne("MAVN.Service.Campaign.MsSqlRepositories.Entities.BonusTypeEntity", "BonusTypeEntity")
                         .WithMany("ConditionEntities")
                         .HasForeignKey("BonusTypeName");
 
-                    b.HasOne("Lykke.Service.Campaign.MsSqlRepositories.Entities.CampaignEntity", "CampaignEntity")
+                    b.HasOne("MAVN.Service.Campaign.MsSqlRepositories.Entities.CampaignEntity", "CampaignEntity")
                         .WithMany("ConditionEntities")
                         .HasForeignKey("CampaignEntityId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Lykke.Service.Campaign.MsSqlRepositories.Entities.EarnRuleContentEntity", b =>
+            modelBuilder.Entity("MAVN.Service.Campaign.MsSqlRepositories.Entities.EarnRuleContentEntity", b =>
                 {
-                    b.HasOne("Lykke.Service.Campaign.MsSqlRepositories.Entities.CampaignEntity", "Campaign")
+                    b.HasOne("MAVN.Service.Campaign.MsSqlRepositories.Entities.CampaignEntity", "Campaign")
                         .WithMany("EarnRuleContents")
                         .HasForeignKey("CampaignId")
                         .OnDelete(DeleteBehavior.Cascade);
