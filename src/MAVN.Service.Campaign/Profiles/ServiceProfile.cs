@@ -1,4 +1,4 @@
-using AutoMapper;
+﻿using AutoMapper;
 using MAVN.Service.Campaign.Client.Models.BonusType;
 using MAVN.Service.Campaign.Client.Models.BurnRule.Requests;
 using MAVN.Service.Campaign.Client.Models.BurnRule.Responses;
@@ -13,10 +13,10 @@ using MAVN.Service.Campaign.Domain.Models.BurnRules;
 using MAVN.Service.Campaign.Domain.Models.EarnRules;
 using System;
 using MAVN.Service.Campaign.Client.Models;
-using EarnRuleContentCreateRequest = Lykke.Service.Campaign.Client.Models.EarnRuleContent.EarnRuleContentCreateRequest;
-using EarnRuleContentEditRequest = Lykke.Service.Campaign.Client.Models.EarnRuleContent.EarnRuleContentEditRequest;
-using EarnRuleContentResponse = Lykke.Service.Campaign.Client.Models.EarnRuleContent.EarnRuleContentResponse;
-using EventCampaignStatus = Lykke.Service.Campaign.Contract.Enums.CampaignStatus;
+using EarnRuleContentCreateRequest = MAVN.Service.Campaign.Client.Models.EarnRuleContent.EarnRuleContentCreateRequest;
+using EarnRuleContentEditRequest = MAVN.Service.Campaign.Client.Models.EarnRuleContent.EarnRuleContentEditRequest;
+using EarnRuleContentResponse = MAVN.Service.Campaign.Client.Models.EarnRuleContent.EarnRuleContentResponse;
+using EventCampaignStatus = MAVN.Service.Campaign.Contract.Enums.CampaignStatus;
 
 namespace MAVN.Service.Campaign.Profiles
 {

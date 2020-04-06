@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,8 +18,8 @@ using MAVN.Service.Campaign.Domain.Repositories;
 using MAVN.Service.Campaign.Domain.Services;
 using MAVN.Service.Campaign.DomainServices.Helpers;
 using Lykke.RabbitMqBroker.Publisher;
-using EventCampaignStatus = Lykke.Service.Campaign.Contract.Enums.CampaignStatus;
-using CampaignStatus = Lykke.Service.Campaign.Domain.Enums.CampaignStatus;
+using EventCampaignStatus = MAVN.Service.Campaign.Contract.Enums.CampaignStatus;
+using CampaignStatus = MAVN.Service.Campaign.Domain.Enums.CampaignStatus;
 
 namespace MAVN.Service.Campaign.DomainServices.Services
 {
