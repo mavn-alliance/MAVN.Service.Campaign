@@ -1,5 +1,5 @@
-using System;
-using Lykke.Service.PartnerManagement.Client.Models;
+﻿using System;
+using MAVN.Service.PartnerManagement.Client.Models;
 
 namespace MAVN.Service.Campaign.Domain.Models
 {

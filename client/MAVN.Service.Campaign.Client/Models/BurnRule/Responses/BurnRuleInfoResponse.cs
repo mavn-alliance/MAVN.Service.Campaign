@@ -1,7 +1,7 @@
-using System;
-using Falcon.Numerics;
+﻿using System;
+using MAVN.Numerics;
 using JetBrains.Annotations;
-using Lykke.Service.PartnerManagement.Client.Models;
+using MAVN.Service.PartnerManagement.Client.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,7 +8,7 @@ using Lykke.Common.MsSql;
 using MAVN.Service.Campaign.Domain.Models.BurnRules;
 using MAVN.Service.Campaign.Domain.Repositories;
 using MAVN.Service.Campaign.MsSqlRepositories.Entities;
-using Lykke.Service.PartnerManagement.Client.Models;
+using MAVN.Service.PartnerManagement.Client.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Service.Campaign.MsSqlRepositories.Repositories

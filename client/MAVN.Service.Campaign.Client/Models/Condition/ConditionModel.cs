@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 using JetBrains.Annotations;
-using Lykke.Service.PartnerManagement.Client.Models;
+using MAVN.Service.PartnerManagement.Client.Models;
 
 namespace MAVN.Service.Campaign.Client.Models.Condition
 {

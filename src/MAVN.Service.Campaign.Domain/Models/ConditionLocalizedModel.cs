@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using Falcon.Numerics;
+using MAVN.Numerics;
 using MAVN.Service.Campaign.Domain.Enums;
-using Lykke.Service.PartnerManagement.Client.Models;
+using MAVN.Service.PartnerManagement.Client.Models;
 
 namespace MAVN.Service.Campaign.Domain.Models
 {

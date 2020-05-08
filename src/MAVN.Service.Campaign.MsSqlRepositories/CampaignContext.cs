@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.Data.Common;
 using JetBrains.Annotations;
 using Lykke.Common.MsSql;
 using MAVN.Service.Campaign.MsSqlRepositories.Entities;
-using Lykke.Service.PartnerManagement.Client.Models;
+using MAVN.Service.PartnerManagement.Client.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Service.Campaign.MsSqlRepositories
