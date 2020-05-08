@@ -1,5 +1,5 @@
 using System.Linq;
-using Falcon.Numerics.Linq;
+using MAVN.Numerics.Linq;
 using FluentValidation;
 using MAVN.Service.Campaign.Client.Models.Condition;
 

@@ -6,7 +6,7 @@ using AutoMapper;
 using Common;
 using Common.Log;
 using Lykke.Common.Log;
-using Falcon.Numerics;
+using MAVN.Numerics;
 using MAVN.Service.Campaign.Contract.Enums;
 using MAVN.Service.Campaign.Contract.Events;
 using MAVN.Service.Campaign.Domain.Enums;

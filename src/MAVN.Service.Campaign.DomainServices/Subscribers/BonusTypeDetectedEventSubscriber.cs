@@ -1,9 +1,10 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using Lykke.Common.Log;
-using Lykke.Service.BonusTriggerAgent.Contract.Events;
+using MAVN.Service.BonusTriggerAgent.Contract.Events;
 using MAVN.Service.Campaign.Domain.Models;
 using MAVN.Service.Campaign.Domain.Services;
+using MAVN.Service.PartnerManagement.Client.Models;
 
 namespace MAVN.Service.Campaign.DomainServices.Subscribers
 {
@@ -33,7 +34,7 @@ namespace MAVN.Service.Campaign.DomainServices.Subscribers
                 AllowConversionRate = message.AllowConversionRate, 
                 CreationDate = DateTime.UtcNow,
                 IsAvailable = message.IsEnabled,
-                Vertical = message.Vertical,
+                Vertical = (Vertical?) message.Vertical,
                 IsStakeable = message.IsStakeable,
                 IsHidden = message.IsHidden,
                 Order = message.Order,

@@ -1,5 +1,5 @@
-using JetBrains.Annotations;
-using Lykke.Service.PartnerManagement.Client.Models;
+﻿using JetBrains.Annotations;
+using MAVN.Service.PartnerManagement.Client.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 

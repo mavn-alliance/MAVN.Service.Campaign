@@ -1,5 +1,5 @@
 using System;
-using Falcon.Numerics;
+using MAVN.Numerics;
 using MAVN.Service.Campaign.Client.Models.Enums;
 
 namespace MAVN.Service.Campaign.Client.Models.Campaign.Requests

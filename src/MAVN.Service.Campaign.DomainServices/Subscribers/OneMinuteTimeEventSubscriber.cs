@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using Lykke.Common.Log;
 using MAVN.Service.Campaign.Domain.Services;
-using Lykke.Service.Scheduler.Contract.Events;
+using MAVN.Service.Scheduler.Contract.Events;
 
 namespace MAVN.Service.Campaign.DomainServices.Subscribers
 {

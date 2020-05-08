@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using Falcon.Numerics;
+using MAVN.Numerics;
 using MAVN.Service.Campaign.Domain.Enums;
 
 namespace MAVN.Service.Campaign.MsSqlRepositories.Entities

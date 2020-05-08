@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -10,7 +10,7 @@ using MAVN.Service.Campaign.Domain.Enums;
 using MAVN.Service.Campaign.Domain.Models;
 using MAVN.Service.Campaign.Domain.Repositories;
 using MAVN.Service.Campaign.MsSqlRepositories.Entities;
-using Lykke.Service.PartnerManagement.Client.Models;
+using MAVN.Service.PartnerManagement.Client.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Service.Campaign.MsSqlRepositories.Repositories

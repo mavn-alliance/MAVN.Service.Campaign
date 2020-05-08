@@ -6,8 +6,10 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
-    <PackageReference Include="Falcon.Service.Scheduler.Contract" Version="1.0.1" />
     <PackageReference Include="Lykke.RabbitMqBroker" Version="7.13.1" />
+    <PackageReference Include="MAVN.Service.BonusTriggerAgent.Contract" Version="1.0.1" />
+    <PackageReference Include="MAVN.Service.PartnerManagement.Client" Version="1.3.0" />
+    <PackageReference Include="MAVN.Service.Scheduler.Contract" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\contract\MAVN.Service.Campaign.Contract\MAVN.Service.Campaign.Contract.csproj" />

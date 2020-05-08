@@ -1,7 +1,7 @@
 using MAVN.Service.Campaign.Domain.Enums;
 using System;
 using System.Collections.Generic;
-using Falcon.Numerics;
+using MAVN.Numerics;
 
 namespace MAVN.Service.Campaign.Domain.Models
 {
