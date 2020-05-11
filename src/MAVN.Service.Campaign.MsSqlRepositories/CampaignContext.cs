@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Common;
 using JetBrains.Annotations;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.Campaign.MsSqlRepositories.Entities;
 using MAVN.Service.PartnerManagement.Client.Models;
 using Microsoft.EntityFrameworkCore;

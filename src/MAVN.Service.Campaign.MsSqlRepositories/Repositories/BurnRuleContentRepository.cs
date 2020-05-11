@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.Campaign.Domain.Enums;
 using MAVN.Service.Campaign.Domain.Models.BurnRules;
 using MAVN.Service.Campaign.Domain.Repositories;

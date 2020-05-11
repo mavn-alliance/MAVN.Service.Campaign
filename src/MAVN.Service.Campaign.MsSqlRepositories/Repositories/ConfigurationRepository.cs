@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.Campaign.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 

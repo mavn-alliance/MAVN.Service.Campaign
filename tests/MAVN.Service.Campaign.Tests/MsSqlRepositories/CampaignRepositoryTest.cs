@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Threading.Tasks;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.Campaign.Domain.Models;
 using MAVN.Service.Campaign.MsSqlRepositories;
 using MAVN.Service.Campaign.MsSqlRepositories.Repositories;
