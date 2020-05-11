@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using AutoMapper;
 using LinqKit;
-using Lykke.Common.MsSql;
+using MAVN.Common.MsSql;
 using MAVN.Service.Campaign.Domain.Enums;
 using MAVN.Service.Campaign.Domain.Models;
 using MAVN.Service.Campaign.Domain.Repositories;
