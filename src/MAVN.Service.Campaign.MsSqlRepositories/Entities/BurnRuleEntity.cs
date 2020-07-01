@@ -15,7 +15,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Entities
         [Column("description")]
         public string Description { get; set; }
 
-        [Column("amount_in_tokens", TypeName = "nvarchar(64)")]
+        [Column("amount_in_tokens")]
         public Money18? AmountInTokens { get; set; }
 
         [Column("amount_in_currency")]

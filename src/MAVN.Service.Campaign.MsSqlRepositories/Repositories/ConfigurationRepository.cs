@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 using System.Threading.Tasks;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Campaign.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,9 +8,9 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Repositories
 {
     public class ConfigurationRepository : IConfigurationRepository
     {
-        private readonly MsSqlContextFactory<CampaignContext> _msSqlContextFactory;
+        private readonly PostgreSQLContextFactory<CampaignContext> _msSqlContextFactory;
 
-        public ConfigurationRepository(MsSqlContextFactory<CampaignContext> msSqlContextFactory)
+        public ConfigurationRepository(PostgreSQLContextFactory<CampaignContext> msSqlContextFactory)
         {
             _msSqlContextFactory = msSqlContextFactory ??
                 throw new ArgumentNullException(nameof(msSqlContextFactory));

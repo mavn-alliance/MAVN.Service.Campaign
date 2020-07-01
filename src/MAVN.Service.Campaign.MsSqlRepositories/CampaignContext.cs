@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Data.Common;
 using JetBrains.Annotations;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Campaign.MsSqlRepositories.Entities;
 using MAVN.Service.PartnerManagement.Client.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace MAVN.Service.Campaign.MsSqlRepositories
 {
-    public class CampaignContext : MsSqlContext
+    public class CampaignContext : PostgreSQLContext
     {
         private const string Schema = "campaign";
 
@@ -45,7 +45,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories
         {
         }
 
-        protected override void OnLykkeModelCreating(ModelBuilder modelBuilder)
+        protected override void OnMAVNModelCreating(ModelBuilder modelBuilder)
         {
             //CampaignEntity
             modelBuilder.Entity<CampaignEntity>()

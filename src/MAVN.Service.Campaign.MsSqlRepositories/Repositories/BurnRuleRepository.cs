@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using LinqKit;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Campaign.Domain.Models.BurnRules;
 using MAVN.Service.Campaign.Domain.Repositories;
 using MAVN.Service.Campaign.MsSqlRepositories.Entities;
@@ -15,11 +15,11 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Repositories
 {
     public class BurnRuleRepository : IBurnRuleRepository
     {
-        private readonly MsSqlContextFactory<CampaignContext> _msSqlContextFactory;
+        private readonly PostgreSQLContextFactory<CampaignContext> _msSqlContextFactory;
         private readonly IMapper _mapper;
 
         public BurnRuleRepository(
-            MsSqlContextFactory<CampaignContext> msSqlContextFactory,
+            PostgreSQLContextFactory<CampaignContext> msSqlContextFactory,
             IMapper mapper)
         {
             _msSqlContextFactory = msSqlContextFactory ??

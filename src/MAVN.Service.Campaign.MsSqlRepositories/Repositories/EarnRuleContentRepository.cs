@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Campaign.Domain.Enums;
 using MAVN.Service.Campaign.Domain.Models.EarnRules;
 using MAVN.Service.Campaign.Domain.Repositories;
@@ -13,11 +13,11 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Repositories
 {
     public class EarnRuleContentRepository : IEarnRuleContentRepository
     {
-        private readonly MsSqlContextFactory<CampaignContext> _msSqlContextFactory;
+        private readonly PostgreSQLContextFactory<CampaignContext> _msSqlContextFactory;
         private readonly IMapper _mapper;
 
         public EarnRuleContentRepository(
-            MsSqlContextFactory<CampaignContext> msSqlContextFactory,
+            PostgreSQLContextFactory<CampaignContext> msSqlContextFactory,
             IMapper mapper)
         {
             _msSqlContextFactory = msSqlContextFactory ??

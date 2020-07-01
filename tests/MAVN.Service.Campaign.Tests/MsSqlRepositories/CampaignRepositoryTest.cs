@@ -1,6 +1,6 @@
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Campaign.Domain.Models;
 using MAVN.Service.Campaign.MsSqlRepositories;
 using MAVN.Service.Campaign.MsSqlRepositories.Repositories;
@@ -21,7 +21,7 @@ namespace MAVN.Service.Campaign.Tests.MsSqlRepositories
 
             var bonusEngineContext = contextFixture.BonusEngineContext;
 
-            var postgresContextFactory = new MsSqlContextFactory<CampaignContext>(
+            var postgresContextFactory = new PostgreSQLContextFactory<CampaignContext>(
                 dbCtx => bonusEngineContext, contextFixture.DbContextOptions);
 
             _campaignRepository = new CampaignRepository(postgresContextFactory, mapper);
