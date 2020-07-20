@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using MAVN.Numerics;
@@ -12,10 +12,10 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Entities
         [Column("bonus_type")]
         public string BonusTypeName { get; set; }
         
-        [Column("immediate_reward", TypeName = "nvarchar(64)")]
+        [Column("immediate_reward")]
         public Money18 ImmediateReward { get; set; }
 
-        [Column("approximate_reward", TypeName = "nvarchar(64)")]
+        [Column("approximate_reward")]
         public Money18? ApproximateAward { get; set; }
 
         [Column("completion_count")]
@@ -44,7 +44,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Entities
         [Column("burning_rule")]
         public decimal? BurningRule { get; set; }
 
-        [Column("amount_in_tokens", TypeName = "nvarchar(64)")]
+        [Column("amount_in_tokens")]
         public Money18? AmountInTokens { get; set; }
 
         [Column("amount_in_currency")]

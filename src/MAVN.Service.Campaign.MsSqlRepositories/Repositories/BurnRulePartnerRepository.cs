@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Campaign.Domain.Repositories;
 using MAVN.Service.Campaign.MsSqlRepositories.Entities;
 
@@ -10,9 +10,9 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Repositories
 {
     public class BurnRulePartnerRepository : IBurnRulePartnerRepository
     {
-        private readonly MsSqlContextFactory<CampaignContext> _msSqlContextFactory;
+        private readonly PostgreSQLContextFactory<CampaignContext> _msSqlContextFactory;
 
-        public BurnRulePartnerRepository(MsSqlContextFactory<CampaignContext> msSqlContextFactory)
+        public BurnRulePartnerRepository(PostgreSQLContextFactory<CampaignContext> msSqlContextFactory)
         {
             _msSqlContextFactory = msSqlContextFactory ??
                                    throw new ArgumentNullException(nameof(msSqlContextFactory));

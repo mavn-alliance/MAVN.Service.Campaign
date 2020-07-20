@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using AutoMapper;
 using LinqKit;
-using MAVN.Common.MsSql;
+using MAVN.Persistence.PostgreSQL.Legacy;
 using MAVN.Service.Campaign.Domain.Enums;
 using MAVN.Service.Campaign.Domain.Models;
 using MAVN.Service.Campaign.Domain.Repositories;
@@ -17,11 +17,11 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Repositories
 {
     public class CampaignRepository : ICampaignRepository
     {
-        private readonly MsSqlContextFactory<CampaignContext> _msSqlContextFactory;
+        private readonly PostgreSQLContextFactory<CampaignContext> _msSqlContextFactory;
         private readonly IMapper _mapper;
 
         public CampaignRepository(
-            MsSqlContextFactory<CampaignContext> msSqlContextFactory,
+            PostgreSQLContextFactory<CampaignContext> msSqlContextFactory,
             IMapper mapper)
         {
             _msSqlContextFactory = msSqlContextFactory;

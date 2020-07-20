@@ -10,7 +10,7 @@ namespace MAVN.Service.Campaign.MsSqlRepositories.Entities
     public class BonusTypeEntity
     {
         [Key]
-        [Column("type", TypeName = "varchar(64)")]
+        [Column("type")]
         public string Type { get; set; }
 
         [Column("display_name")]
